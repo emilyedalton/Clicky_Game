@@ -13,33 +13,49 @@ class App extends Component {
   // on click 
   // .sort(()=>Math.random()-0.5));
   state = {
-    friends,
-     score: 0,
+  friends,
+  score: 0,
   topscore: 0,
-  clicked: 0
   };
-  handleIncrement = () => {
-   
-    // We always use the setState method to update a component's state
-    // this.setState({ score: this.state.friends.score + 1 , clicked});
-    // this.setState({ friends });
 
+  handleIncrement = () => {
+   this.setState({ friends , score: this.state.score + 1});  
+   shuffle(friends)
+ 
   };
   
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    // const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    //if cardstate.hiding is true make it cardstate.matching, else keep it hiding. 
-  // CardState.HIDING ? CardState.MATCHING :
-  // CardState.HIDING
-    shuffle(friends);  
-this.setState({ friends , score: this.state.score + 1});
-this.setState({friends, clicked: this.state.clicked +1});
-console.log(this.state);
-  };
-
+ 
   // Map over this.state.friends and render a FriendCard component for each friend object
+
+  removeFriend = id => {
+ 
+    // Emily, iterates each element in the array of objects called friends which is a json file 
+   friends.map(friend => {
+      //if the friend we're on matches the id that we're looking for
+      // alert(id +" --- " +friend.id );
+      //checks the json friend.id against the userclick id and look for friend.clicked equals 0
+      if (friend.id === id && friend.clicked === 0) {
+        friend.clicked=1;
+        this.setState({ friends: friends, score: this.state.score + 1, topscore: this.state.topscore + 1 });
+        return true;
+         // since this is using a map function, it needs a return of boolean
+                     //This statement is true since it found the click id that matches our json friend id
+                     // and has the clicked to 0
+      } else if (friend.id === id && friend.clicked === 1) {
+ 
+         // if this doesn't match ,we reset score 0 return false
+       this.setState({   score: 0 });
+       return false;
+      }
+
+       //if and else if doesn't execute, the below code is the default to false
+      return false;
+    });
+
+    //Emily. this shuffle the images
+shuffle(friends);
+
+}
   render() {
     return (
       <Wrapper>
