@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Scorecount from "./components/Scorecount";
+import shuffle from "shuffle-array";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
@@ -28,7 +29,7 @@ class App extends Component {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     // const friends = this.state.friends.filter(friend => friend.id !== id);
     // Set this.state.friends equal to the new friends array
-shuffle(friends);  
+    shuffle(friends);  
 this.setState({ friends , score: this.state.score + 1});
   };
 
