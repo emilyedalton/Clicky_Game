@@ -18,11 +18,7 @@ class App extends Component {
   topscore: 0,
   };
 
-  handleIncrement = () => {
-   this.setState({ friends , score: this.state.score + 1});  
-   shuffle(friends)
  
-  };
   
  
   // Map over this.state.friends and render a FriendCard component for each friend object
