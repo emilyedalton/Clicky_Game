@@ -15,12 +15,13 @@ class App extends Component {
   state = {
     friends,
      score: 0,
-  topscore: 0
+  topscore: 0,
+  clicked: 0
   };
   handleIncrement = () => {
    
     // We always use the setState method to update a component's state
-    this.setState({ score: this.state.friends.score + 1 });
+    // this.setState({ score: this.state.friends.score + 1 , clicked});
     // this.setState({ friends });
 
   };
@@ -29,8 +30,13 @@ class App extends Component {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     // const friends = this.state.friends.filter(friend => friend.id !== id);
     // Set this.state.friends equal to the new friends array
+    //if cardstate.hiding is true make it cardstate.matching, else keep it hiding. 
+  // CardState.HIDING ? CardState.MATCHING :
+  // CardState.HIDING
     shuffle(friends);  
 this.setState({ friends , score: this.state.score + 1});
+this.setState({friends, clicked: this.state.clicked +1});
+console.log(this.state);
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
