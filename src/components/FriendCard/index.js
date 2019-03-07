@@ -6,8 +6,8 @@ function FriendCard(props) {
     <div className="card">
       <div className="img-container">
         <img alt={props.name} src={props.image} />
-      
-      {/* <div className="content">
+      </div>
+      <div className="content">
         <ul>
           <li>
             <strong>Name:</strong> {props.name}
@@ -18,10 +18,7 @@ function FriendCard(props) {
           <li>
             <strong>Location:</strong> {props.location}
           </li>
-          <li>
-            <strong>Score:</strong> {props.score}
-          </li>
-        </ul> */}
+        </ul>
       </div>
       <span onClick={() => props.removeFriend(props.id)} className="remove">
         𝘅
