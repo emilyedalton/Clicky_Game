@@ -33,15 +33,7 @@
     "clicked": 0 
 
   },
-  {
-    "id": 6,
-    "name": "Doug Funnie",
-    "image": "https://vignette1.wikia.nocookie.net/doug/images/3/3b/Doug001.gif/revision/latest?cb=20110807170511",
-    "occupation": "Student",
-    "location": "Bluffington",
-    "clicked": 0 
 
-  },
   {
     "id": 6,
     "name": "Red Square: Painterly Realism of a Peasant Woman in Two Dimensions,",
@@ -69,23 +61,6 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Malevitj.jpg/800px-Malevitj.jpg",
     "clicked": 0 
 
-  },
-  {
-    "id": 11,
-    "name": "Captain Planet",
-    "image": "http://vignette2.wikia.nocookie.net/dragon-rap-battles/images/b/b6/Captain_Planet.png/revision/latest?cb=20160911200836",
-    "occupation": "Superhero",
-    "location": "Earth",
-    "clicked": 0 
-
-  },
-  {
-    "id": 12,
-    "name": "Ickis",
-    "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
-    "occupation": "Ahhhh! A Real Monster!",
-    "location": "Under a City Dump",
-    "clicked": 0 
 
   }
 ]
