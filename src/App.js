@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import shuffle from "shuffle-array";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+// import Title from "./components/Title";
 import friends from "./friends.json";
+import Navbar from "./components/Navbar"
 
 class App extends Component {
   state = {
@@ -36,8 +37,11 @@ shuffle(friends)    }
 
   render() {
     return (
+      <div>
+      <Navbar> <p class = "bodyz">Сцоре: {this.state.score} Топ Сцоре: {this.state.topscore}</p>   </Navbar>
+
       <Wrapper>
-        <Title>Friends List score: {this.state.score} {this.state.topscore}  </Title>
+
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
@@ -50,7 +54,10 @@ shuffle(friends)    }
           />
         ))}
       </Wrapper>
+      </div>
     );
+
+    
   }
 }
 
