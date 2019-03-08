@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import PaintingCard from "./components/PaintingCard";
 import shuffle from "shuffle-array";
 import Wrapper from "./components/Wrapper";
-// import Title from "./components/Title";
 import friends from "./friends.json";
 import Navbar from "./components/Navbar"
+
 
 class App extends Component {
   state = {
@@ -13,7 +13,7 @@ class App extends Component {
     score: 0
   };
 
-    removeFriend = id => {
+    removePainting = id => {
  
      friends.map(friend => {
 
@@ -35,6 +35,10 @@ shuffle(friends)    }
     
 
 
+
+
+
+
   render() {
     return (
       <div>
@@ -43,8 +47,8 @@ shuffle(friends)    }
       <Wrapper>
 
         {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
+          <PaintingCard
+            removePainting={this.removePainting}
             id={friend.id}
             key={friend.id}
             name={friend.name}

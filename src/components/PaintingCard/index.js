@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
+function PaintingCard(props) {
   return (
-    <div className="card" onClick={() => props.removeFriend(props.id)}>
+    <div className="card" onClick={() => props.removePainting(props.id)}>
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
@@ -11,4 +11,4 @@ function FriendCard(props) {
   );
 }
 
-export default FriendCard;
+export default PaintingCard;
