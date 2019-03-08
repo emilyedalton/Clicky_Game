@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
 
-
 h2{
     font-family: 'Fjalla One', sans-serif;
     font-size: 12em;
@@ -10,5 +9,9 @@ h2{
     font-family: 'Fjalla One', sans-serif;
     font-size: 3em;
 
+
+}
+.jumbotron{
+background-color: white;
 
 }
