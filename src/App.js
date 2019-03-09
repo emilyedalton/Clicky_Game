@@ -13,7 +13,6 @@ class App extends Component {
     score: 0
   };
 
-// this.handleNewGame = this.handleNewGame.bind(this);
    
 
 
