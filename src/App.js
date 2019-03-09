@@ -13,6 +13,10 @@ class App extends Component {
     score: 0
   };
 
+// this.handleNewGame = this.handleNewGame.bind(this);
+   
+
+
     removePainting = id => {
  
      friends.map(friend => {
@@ -29,20 +33,17 @@ class App extends Component {
   
         return false;
       });
+
+     
   
 shuffle(friends)    }
-
-    
-
-
-
-
 
 
   render() {
     return (
       <div>
-      <Navbar> <p class = "bodyz">Сцоре: {this.state.score} Топ Сцоре: {this.state.topscore}</p>   </Navbar>
+      <Navbar>  <p className = "bodyz">Сцоре: {this.state.score} Топ Сцоре: {this.state.topscore} </p>  
+      </ Navbar>
 
       <Wrapper>
 
